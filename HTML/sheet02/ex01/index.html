@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX01 - Entendiendo el atributo role</title>
+</head>
+<body>
+    
+    <header>
+        <h1>ex01 de sheet02</h1>
+        <p>Subtitulo</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <article>
+            <h2>Artículo con semántica nativa</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+        
+        <!-- 
+        ROLES IMPLÍCITOS DETECTADOS POR EL ÁRBOL DE ACCESIBILIDAD:
+        - <header>: role="banner" (implícito)
+        - <nav>: role="navigation" (implícito)  
+        - <main>: role="main" (implícito)
+        - <article>: role="article" (implícito)
+        - <footer>: role="contentinfo" (implícito)
+        
+        Estos elementos no necesitan role porque ya tienen semántica nativa.
+        -->
+        
+        <!-- SECCIÓN 2: Divs con role para crear semántica artificial -->
+        
+        <div role="article" aria-labelledby="titulo-articulo" aria-describedby="resumen-articulo">
+            <div id="titulo-articulo">
+                <h2>Artículo construido con divs y roles</h2>
+            </div>
+            <div id="resumen-articulo">
+                <p><strong>Resumen:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Lorem ipsum dolor sit amet</p>
+    </footer>
+    
+    <!-- 
+    EXPLICACIÓN:
+    
+    APROPIADO usar role:
+    - Cuando usas elementos genéricos (div, span) que necesitan semántica específica
+    - Para crear componentes personalizados (botones, diálogos, pestañas)  
+    - Cuando el HTML nativo no tiene el elemento semántico que necesitas
+    - Para mejorar la accesibilidad de elementos interactivos personalizados
+    
+    NO APROPIADO usar role:
+    - En elementos que ya tienen semántica nativa (header, nav, main, article, etc.)
+    - Para contradecir o cambiar la semántica nativa de un elemento
+    - Cuando existe un elemento HTML semántico apropiado para el contenido
+    - Como sustituto de buen HTML semántico
+    
+    REGLA GENERAL: Usa HTML semántico primero, role solo cuando sea necesario.
+    -->
+
+</body>
+</html>
