@@ -1,0 +1,6 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.experimentalWhitespaceRendering": "svg",
+    "editor.renderLineHighlight": "line",
+    "livePreview.defaultPreviewPath": "/CSS/sheet01/ex15/index.html"
+}

@@ -2,9 +2,9 @@ package ex04;
 
 public class Producto {
 
-    public String nombre;
-    public double precio;
-    public int stock;
+    private String nombre;
+    private double precio;
+    private int stock;
 
     public Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
@@ -20,6 +20,14 @@ public class Producto {
 
     public void mostrarDatos() {
         System.out.printf("Datos-> nombre %s, precio %.2f, stock %d \n", this.nombre, this.precio, this.stock);
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
     }
 
 }
